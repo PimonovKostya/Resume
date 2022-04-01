@@ -1,0 +1,19 @@
+Hi there!
+This is a guide to this app.
+
+IMPORTANT!!!!
+This app uses all tables in current schema, but you have to change parameter 'TABLE_SCHEMA'
+in GET_TABLES GET_COLUMN_NAMES sql requests and URL 'localhost/...' in utils.Const.
+
+To begin use app firstly choose File/Open, it may not work till connection is not succeed.
+
+Insert command is to create new row in table, but
+IMPORTANT!!!!!
+if column is a foreign key to another table, you have to add current id from that table,
+if such id is not exist, create new row in that table.
+
+Update and Delete function is based on mouse click.
+Click on a current data in a row you want to Update and THEN click Update from menu
+Delete function will delete full row from table.
+
+If changes does not applied in table try Update/Reload.
