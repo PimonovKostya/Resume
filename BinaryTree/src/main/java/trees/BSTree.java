@@ -16,9 +16,10 @@ public class BSTree implements ITree {
     private int counter = 0;
     private int val;
 
+    ///конструктор "ветки" дерева
     private class Root{
-        public Root leftBranch;
-        public Root rightBranch;
+        public Root leftBranch;     //левый лист
+        public Root rightBranch;    //правый лист
         private int value = -666;
 
         public Root(int value){
@@ -27,6 +28,7 @@ public class BSTree implements ITree {
             rightBranch = null;
         }
     }
+    ///метод инициализации массива в бинарное дерево
     @Override
     public void init(int[] ar) {
         if (calc == 0 && ar != null) {
@@ -41,7 +43,7 @@ public class BSTree implements ITree {
     }
 
 
-
+    ///метод передачи в консоль дерева в виде массива
     @Override
     public void print() {
         zeroCounter();
@@ -54,7 +56,7 @@ public class BSTree implements ITree {
         }
     }
 
-
+    ///метод очистки дерева
     @Override
     public void clear() {
         zeroCounter();
