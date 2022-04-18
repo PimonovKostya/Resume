@@ -44,7 +44,7 @@ function createNew(bankName, interest, mloan, minPayment, inputLoan) {
     }
 
     var input_interest = document.createElement("input");
-    input_interest.type = "text";
+    input_interest.type = "number";
     input_interest.id = "interest_rate";
     input_interest.className = "interest_rate";
     input_interest.placeholder = "10%";
@@ -55,7 +55,7 @@ function createNew(bankName, interest, mloan, minPayment, inputLoan) {
     }
 
     var input_mloan = document.createElement("input");
-    input_mloan.type = "text";
+    input_mloan.type = "number";
     input_mloan.id = "maxloan";
     input_mloan.className = "maxloan";
     input_mloan.placeholder = "150 000";
@@ -65,7 +65,7 @@ function createNew(bankName, interest, mloan, minPayment, inputLoan) {
     }
 
     var input_mpayment = document.createElement("input");
-    input_mpayment.type = "text";
+    input_mpayment.type = "number";
     input_mpayment.id = "min_down_payment";
     input_mpayment.className = "min_down_payment";
     input_mpayment.placeholder = "50 000";
@@ -76,7 +76,7 @@ function createNew(bankName, interest, mloan, minPayment, inputLoan) {
 
 
     var input_loan = document.createElement("input");
-    input_loan.type = "text";
+    input_loan.type = "number";
     input_loan.id = "loan_tern";
     input_loan.className = "loan_tern";
     input_loan.placeholder = "3";
@@ -259,10 +259,10 @@ function bildCalc() {
 
     /// inputs
     const input_init_loan = document.createElement("input");
-    input_init_loan.type = "text";
+    input_init_loan.type = "number";
 
     const input_down_payment = document.createElement("input");
-    input_down_payment.type = "text";
+    input_down_payment.type = "number";
 
     /// dropdownMenu
     const bank_dropdown = document.createElement("div");
