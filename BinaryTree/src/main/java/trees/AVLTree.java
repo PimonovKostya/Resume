@@ -56,16 +56,18 @@ public class AVLTree implements ITree{
     @Override
     public void add(int val) {
         if(thisRoot.value > val){
-            add(val, thisRoot.leftBranch);
+            branchRoot = thisRoot.leftBranch;
+            add(val, branchRoot);
         }else if (thisRoot.value < val){
-            add(val, thisRoot.rightBranch);
+            branchRoot = thisRoot.rightBranch;
+            add(val, branchRoot);
         }else
             System.out.println("Binary Tree cannot contain equal values, so " + val + " is skipped");
     }
 
     private void add(int val, Root root){
         if(root == null){
-            root = new Root(val);
+            branchRoot = new Root(val);
         }else{
             thisRoot = root;
             add(val);
