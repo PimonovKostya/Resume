@@ -1,0 +1,13 @@
+<ul>
+    {{#if isCreate}}
+    <li class="active"><a href="/">Store</a></li>
+    {{else}}
+    <li><a href="/">Store</a></li>
+    {{/if}}
+
+    {{#if isSelling}}
+    <li class="active"><a href="/cart">Shopping Cart</a></li>
+    {{else}}
+    <li><a href="/cart">Shopping Cart</a></li>
+    {{/if}}
+</ul>
