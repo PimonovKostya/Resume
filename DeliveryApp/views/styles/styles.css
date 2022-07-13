@@ -115,7 +115,20 @@ input[type=submit]:hover {
     align-content: center;
     justify-content: center;
 }
-
+.noSidebar{
+    position: absolute;
+    top: 10%;
+    left: 10%;
+}
+.noSidebar h1{
+    font-family: 'Times New Roman', Times, serif;
+}
+.noSidebar p{
+    font: italic small-caps bold 16px/2 cursive;
+}
+.noSidebar pre{
+    font: italic small-caps bold 12px/2 cursive;
+}
 button {
     padding: 8px 25px;
     font-size: 18px;

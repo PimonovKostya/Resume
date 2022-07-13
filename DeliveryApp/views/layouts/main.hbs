@@ -1,9 +1,12 @@
 {{> head}}
 <body>
     {{> navbar}}
+    {{#if noSideBar}}
+    {{else}}
     <div class="sidebar">
         {{> sidebar}}
     </div>
+    {{/if}}
     <div class="page-content">
         {{{ body}}}
     </div>
