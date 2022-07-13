@@ -65,7 +65,7 @@ router.post('/cart/save', async(req, res) => {
     var customer = model.orderBook();
     var newModel = new customer({
         Name: req.body.name,
-        Email: req.body.email,
+        Email: req.body.mail,
         Phone: req.body.phone,
         Address: req.body.address,
         Price: req.body.price
@@ -73,7 +73,7 @@ router.post('/cart/save', async(req, res) => {
     await newModel.save();
     var oldOrders = model.cartBook();
     await oldOrders.deleteMany({}).lean();
-    res.redirect('http://localhost:8000/')
+    await res.redirect('/')
 })
 
 router.post('/click', (req, res) => {

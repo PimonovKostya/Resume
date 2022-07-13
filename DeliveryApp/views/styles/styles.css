@@ -115,10 +115,20 @@ input[type=submit]:hover {
     align-content: center;
     justify-content: center;
 }
+.box label{
+    font: italic small-caps bold 16px/2 cursive;
+}
+.box span{
+    font: italic small-caps bold 12px/2 cursive;
+}
 .noSidebar{
     position: absolute;
     top: 10%;
     left: 10%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
 }
 .noSidebar h1{
     font-family: 'Times New Roman', Times, serif;

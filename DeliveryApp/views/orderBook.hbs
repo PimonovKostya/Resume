@@ -1,18 +1,14 @@
-<div class="noSidebar">
+<div class="noSidebar" style="flex-direction: row;">
     {{#if orders.length}}
-    <ul>
         {{#each orders}}
-                <li>
-                    <div class="box">
-                        <h2 id="name">{{Name}}</h2>
-                        <p id="phone">{{Phone}}</p>
-                        <p id="address">{{Address}}</p>
-                        <p id="price">{{Price}}</p>
-                    </div>
-                </li>
+            <div class="box">
+                <label for="name">Custommer Name: <span id="name">{{Name}}</span></label>
+                <label for="email">Email: <span id="email">{{Email}}</span></label>
+                <label for="phone">Phone number: <span id="phone">{{Phone}}</span></label>
+                <label for="address">Address: <span id="address">{{Address}}</span></label>
+                <label for="price">Price: <span id="price">{{Price}}</span></label>
+            </div>
         {{/each}}
-    </ul>
-
     {{else}}
     <p>No clients?!</p>
     {{/if}}
