@@ -1,7 +1,7 @@
 import express from "express";
 import mongoose from "mongoose";
 import exphbs from 'express-handlebars';
-import menuRouter from './routes/menus.js';
+import menuRouter from './routes/router.js';
 import path from 'path'
 import bodyParser from "body-parser";
 
@@ -25,22 +25,6 @@ app.use(menuRouter);
 app.use('/style.css', express.static(path.resolve('views', 'styles', 'styles.css')))
 app.use('/functions/func.js' ,express.static(path.resolve('views', 'functions', 'func.js')));
 app.use('/functions/cart.js', express.static(path.resolve('views', 'functions', 'cart.js')));
-
-// // app.use('/', router)
-
-// app.get('/', (req, res) =>{
-//     res.render('views/index');
-// });
-
-// app.use('/cart', express.static(path.resolve('public', 'cart')));
-
-// app.get('/', (req, res) => {
-//     res.sendFile(path.resolve('public', 'store', 'store.html'));
-// })
-
-// app.get('/cart', (req, res) => {
-//     res.sendFile(path.resolve('public', 'cart', 'cart.html'));
-// })
 
 async function start(){
     try{

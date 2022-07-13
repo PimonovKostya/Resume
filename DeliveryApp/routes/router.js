@@ -62,21 +62,8 @@ router.post('/cart/save', async(req, res) => {
     oldOrders.deleteMany({});
     res.redirect('/');
 })
-
-router.get('/McDonny', async (req, res) => {
-    model.changeName('McDonny')
-})
-
-router.get('/CFK', (req, res) => {
-    model.changeName('CFK')
-})
-
-router.get('/Bufette', (req, res) => {
-    model.changeName('Bufette')
-})
-
-router.get('/TwoPrice', (req, res) => {
-    model.changeName('TwoPrice')
+router.post('/click', (req, res) => {
+    model.changeName(req.body.btn)
 })
 
 export default router;   
