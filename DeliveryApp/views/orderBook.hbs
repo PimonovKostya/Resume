@@ -1,0 +1,17 @@
+{{#if orders.length}}
+<ul>
+    {{#each orders}}
+            <li>
+                <div class="box">
+                    <h2 id="name">{{Name}}</h2>
+                    <p id="phone">{{Phone}}</p>
+                    <p id="address">{{Address}}</p>
+                    <p id="price">{{Price}}</p>
+                </div>
+            </li>
+    {{/each}}
+</ul>
+
+{{else}}
+<p>No clients?!</p>
+{{/if}}

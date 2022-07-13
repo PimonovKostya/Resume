@@ -25,6 +25,15 @@ router.get('/cart', async (req, res) => {
     });
 })
 
+router.get('/orderBook', async (req, res) => {
+    var orders = await model.orderBook().find({}).lean();
+
+    res.render('orderBook', {
+        title: 'Custommers',
+        orders
+    })
+})
+
 router.post('/cart/delete', async (req, res) => {
     try{
         var m = model.cartBook();
@@ -62,8 +71,11 @@ router.post('/cart/save', async(req, res) => {
     oldOrders.deleteMany({});
     res.redirect('/');
 })
+
 router.post('/click', (req, res) => {
     model.changeName(req.body.btn)
 })
+
+
 
 export default router;   
