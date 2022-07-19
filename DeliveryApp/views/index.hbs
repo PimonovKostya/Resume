@@ -3,12 +3,15 @@
     {{#each orders}}
             <li>
                 <div class="box">
+                    <img src="{{img}}">
                     <h2 id="name">{{name}}</h2>
                     <p  id="discription">{{discription}}</p>
-                    <p  id="price">{{price}}
-                        <label >$</label>
-                    </p>
-                    <button class="btn-small" id="btn-create" type="submit">Order</button>
+                    <div class="order-bar">
+                        <p  id="price">{{price}}
+                            <label >$</label>
+                        </p>
+                        <button class="btn-small" id="btn-create" type="submit">Order</button>
+                    </div>
                 </div>
             </li>
     {{/each}}

@@ -79,7 +79,7 @@ input, select {
   box-sizing: border-box;
 }
 div {
-    border-radius: 5px;
+    border-radius: 75px;
     padding: 20px;
   }
 
@@ -120,6 +120,19 @@ input[type=submit]:hover {
 }
 .box span{
     font: italic small-caps bold 12px/2 cursive;
+}
+.order-bar{
+    display: flex;
+    align-items: center;
+    padding: 0px;
+}
+img{
+    height: 100px;
+    border-radius: 50px;
+}
+p{
+    font: italic small-caps bold 12px/2 cursive;
+
 }
 .noSidebar{
     position: absolute;

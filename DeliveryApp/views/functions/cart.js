@@ -46,8 +46,6 @@ submitBtn.addEventListener('click', async () => {
     }catch(e){
         alert('Please insert your data in fields');
     }
-    
-
     let response = await fetch('/cart/save', {
         method: 'POST',
         headers:{

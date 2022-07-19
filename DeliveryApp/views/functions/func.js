@@ -19,15 +19,13 @@ buttons.forEach(button => button.addEventListener('click', async () =>{
 }))
 
 btnOrder.forEach(btn => btn.addEventListener('click', async () => {
-    var box = btn.parentElement;
-    var childNodes = {};
-    for(var i = 0; i < 3; i ++){
-        childNodes[i] = box.children[i];
-    }
+    var box = btn.parentElement.parentElement;
+    var price = btn.parentElement;
     let order = {
-        name: childNodes[0].innerHTML,
-        discription: childNodes[1].innerHTML,
-        price: childNodes[2].innerHTML
+        name: box.children[1].innerHTML,
+        discription: box.children[2].innerHTML,
+        price: price.children[0].innerHTML.match('^\[0-9]+')[0],
+        img: box.children[0].currentSrc
     } 
     let response = await fetch('/create', {
         method: 'POST',

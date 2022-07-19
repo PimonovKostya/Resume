@@ -12,6 +12,9 @@ export default class SchemaBuilder{
             },
             price: {
                 type: Number,
+            },
+            img: {
+                type: String,
             }
         });
 
