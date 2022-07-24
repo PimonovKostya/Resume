@@ -6,10 +6,13 @@
             <img src="{{img}}">
             <h2 id="name">{{name}}</h2>
             <p  id="discription">{{discription}}</p>
-            <p  id="price">{{price}}
-                <label>$</label>
-            </p>
-            <button id="btn-delete" type="submit">Delete</button>
+            <div class="order-bar">
+                <p  id="price">{{price}}
+                    <label>$</label>
+                </p>
+                <button id="btn-delete" type="submit">Delete</button>
+                <input id="count" type="number" min="1" value="{{count}}">
+            </div>
         </div>
     </li>
     {{/each}}

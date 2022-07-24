@@ -25,7 +25,8 @@ btnOrder.forEach(btn => btn.addEventListener('click', async () => {
         name: box.children[1].innerHTML,
         discription: box.children[2].innerHTML,
         price: price.children[0].innerHTML.match('^\[0-9]+')[0],
-        img: box.children[0].currentSrc
+        img: box.children[0].currentSrc,
+        count: price.children[2].value
     } 
     let response = await fetch('/create', {
         method: 'POST',

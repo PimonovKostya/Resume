@@ -5,7 +5,7 @@ const router = new Router();
 const model = new ShemaBuilder()
 
 router.get('/orderBook', async (req, res) => {
-    var orders = await model.orderBook().find({}).lean();
+    var orders = await model.getOrderBook().find({}).lean();
 
     res.render('orderBook', {
         title: 'Custommers',

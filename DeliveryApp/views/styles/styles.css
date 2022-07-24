@@ -78,6 +78,12 @@ input, select {
   border-radius: 4px;
   box-sizing: border-box;
 }
+input[type='number' i]{
+    width: 50px;
+    height: 35px;
+    padding: 5px;
+    margin: 10px;
+}
 div {
     border-radius: 75px;
     padding: 20px;

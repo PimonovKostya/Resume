@@ -4,11 +4,11 @@ class localStorage{
     constructor(){
         this.orderStorage = new LocalStorage('/scratch');
     }
-    addOrder(name, discription, price, img){
-        this.orderStorage.setItem(name, discription + '|' + price + '|' + img)
+    addOrder(name, discription, price, img, count){
+        this.orderStorage.setItem(name, discription + '|' + price + '|' + img + '|' + count)
     }
     deleteOrder(name){
-        this.orderStorage.renoveItem(name);
+        this.orderStorage.removeItem(name);
     }
     clearAll(){
         this.orderStorage.clear()
@@ -23,6 +23,7 @@ class localStorage{
                 name: name,
                 discription: val[0],
                 price: val[1],
+                count: val[3]
             });
         }
         return JSON.stringify(orders);

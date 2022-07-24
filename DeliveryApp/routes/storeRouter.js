@@ -17,7 +17,7 @@ router.get('/', async (req, res)=>{
 })
 
 router.post('/create', async(req, res)=>{ 
-    localStorage.addOrder(req.body.name, req.body.discription, req.body.price, req.body.img)
+    localStorage.addOrder(req.body.name, req.body.discription, req.body.price, req.body.img, req.body.count)
     res.redirect('/')
 })
 

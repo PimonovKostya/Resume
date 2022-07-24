@@ -17,7 +17,7 @@ router.get('/cart', async (req, res) => {
 
 router.post('/cart/delete', async (req, res) => {
     localStorage.deleteOrder(req.body.name);
-    res.redirect('/cart')
+    res.redirect(301, req.originalUrl);
 })
 
 router.post('/cart/save', async(req, res) => {
@@ -31,11 +31,10 @@ router.post('/cart/save', async(req, res) => {
             Price: req.body.price
         })
         await newModel.save();
-        res.redirect('/')
+        localStorage.clearAll();
     }catch(e){
         console.log(e)
     }
-    
 })
 
 export default router;   

@@ -42,14 +42,18 @@ export default class SchemaBuilder{
     }
 
     cartBook(){
-        return mongoose.model('wtf?', this.schema, 'CartBook')
+        return mongoose.model('wtf?', this.schema, 'CartBook');
     }
 
     orderBook(){
-        return mongoose.model('order', this.customer, 'OrderBook')
+        return mongoose.model('order', this.customer, 'OrderBook');
+    }
+
+    getOrderBook(){
+        return mongoose.model('getOrder', this.customer, 'OrderBook');
     }
 
     getModel(){
-        return mongoose.model('wtf?', this.schema, this.shopName)
+        return mongoose.model('wtf?', this.schema, this.shopName);
     }
 }
