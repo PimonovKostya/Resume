@@ -1,0 +1,19 @@
+{
+  "name": "medowlark",
+  "version": "1.0.0",
+  "description": "",
+  "main": "medowlark.js",
+  "scripts": {
+    "start": "npm medowlark.js",
+    "test": "nodemon medowlark.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1",
+    "express-handlebars": "^6.0.6"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
+}
