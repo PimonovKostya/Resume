@@ -1,0 +1,13 @@
+{
+  "name": "testtask",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "task1": "node ./taskOne/index.js",
+    "task2": "node ./taskTwo/index.js",
+    "task3": "node ./taskThree/index.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
