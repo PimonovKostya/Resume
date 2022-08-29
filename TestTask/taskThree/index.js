@@ -1,12 +1,21 @@
-const random = require('./randomGenerator.js');
-const World = require('./World.js');
 
-const world = new World(30, -48, 60, random);
+const PATH = require('./PATH.js')
+const FileManager = require('./FileManager.js');
+const JsonParser = require('./JsonParser.js');
 
-console.log(random.x + '|' + random.y + '|' + random.z);  
+const fm = new FileManager();
+const jp = new JsonParser();
 
-console.log(world.distanceCalculator());
+jp.parseInput(fm.readFile(PATH.input));
 
-console.log(world.pathFinder());
+fm.writeFile(PATH.output, jp.parseOutput())
 
-console.log(`Number of iterations : ${world.iterator}`);
+// const world = new World(30, -48, 60, random);
+
+// console.log(random.x + '|' + random.y + '|' + random.z);  
+
+// console.log(world.distanceCalculator());
+
+// console.log(world.pathFinder());
+
+// console.log(`Number of iterations : ${world.iterator}`);

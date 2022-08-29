@@ -24,7 +24,10 @@ module.exports = class Container{
         return this.condition;
     }
     getUserCollection(){
-        return this.userCollection;
+        let result;
+        return result ={
+            "result" : this.userCollection
+        } 
     }
     //filters
     filterByPar(flag){

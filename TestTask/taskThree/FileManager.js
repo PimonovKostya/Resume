@@ -1,7 +1,6 @@
 const fs = require('fs');
 
 module.exports = class FileManager{
-
     readFile(path){
         return JSON.parse(fs.readFileSync(path));
     }
@@ -12,4 +11,3 @@ module.exports = class FileManager{
         })
     }
 }
-

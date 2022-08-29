@@ -2,9 +2,12 @@
     "data": [
         {"user": "mike@mail.com", "rating": 20, "disabled": false},
         {"user": "greg@mail.com", "rating": 14, "disabled": false},
-        {"user": "john@mail.com", "rating": 25, "disabled": true}
+        {"user": "john@mail.com", "rating": 25, "disabled": true},
+        {"user": "kostya@mail.com", "rating": 66, "disabled": true},
+        {"user": "andrew@mail.com", "rating": 33, "disabled": false},
+        {"user": "qwerty@mail.com", "rating": 1, "disabled": true}
     ],
     "condition": {
-        "exclude": [{"disabled": true}], "sort_by": ["user"]
+        "exclude": [{"disabled": false}], "sort_by": ["rating"]
     }
 }

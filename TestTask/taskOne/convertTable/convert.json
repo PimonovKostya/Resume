@@ -1,4 +1,6 @@
 {
-    "metric,imperic": 1.093,
-    "imperic,metric": 0.914
+    "metric,imperic"    : 1.093,
+    "imperic,metric"    : 0.914,
+    "imperic,imperic"   : 1,
+    "metric,metric"     : 1
 }

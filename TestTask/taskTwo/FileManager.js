@@ -7,7 +7,12 @@ module.exports = class FileManager{
     }
 
     readFile(path){
-        return JSON.parse(fs.readFileSync(path));
+        try{
+            return JSON.parse(fs.readFileSync(path));
+        }catch(e){
+            throw new Error(`No input file './input/data.json' \n ${e}`);
+        }
+        
     }
     
     writeFile(path, data){
